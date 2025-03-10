@@ -34,7 +34,6 @@
 // - Change the `fullName` variable to be a number (or an object or a boolean or
 //   anything that's not a string). It should log the same error message.
 
-
 // 5. Changing the code above, let's declare a function called `greetUser` that
 // has all the logic above inside it. The only code outside the function should
 // be when we call our function, passing in either our `fullName` variable

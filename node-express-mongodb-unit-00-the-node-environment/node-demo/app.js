@@ -16,5 +16,7 @@ create 3 directories
 name them what you want. 
 3 different dependencies for each directory
 
+.gitignore file in the root of the project 
+
 
 */
