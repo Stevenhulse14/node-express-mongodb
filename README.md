@@ -130,7 +130,7 @@ Happy Coding!
 
   - [📖 Node.js Modules ][nodejs-modules]
   - [📖 Fs Library][fs-lib]
-  - [📖 Git Handbook][tic-tac-toe]
+  - [📖 Tic Tac Toe Proj][tic-tac-toe]
 
 [nodejs-modules]: https://nodejs.org/api/modules.html
 [fs-lib]: https://www.w3schools.com/nodejs/nodejs_filesystem.asp
