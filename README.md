@@ -124,7 +124,7 @@ Happy Coding!
 | Running Node            | [📺][]  |        | -    | -        | -      |
 | Introduction to Modules | [📺][]  |        | -    | -        | -      |
 
-#### Day 2: Modules / FS Lib Tic Tac Toe Review
+#### Day 2: Modules / FS Library / Tic Tac Toe Review
 
 - Pre-Work:
 
