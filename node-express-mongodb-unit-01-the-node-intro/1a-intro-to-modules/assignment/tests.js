@@ -4,6 +4,11 @@
 
 // fibonacci - import the function here
 
+let ageChecker = require("./ageChecker");
+// fizzBuzz - import the function here
+let { fizzBuzz } = require("./fizzBuzz");
+// fibonacci - import the function here
+//let { fibonacci } = require("./fibonacci");
 /*
     TEST SPACE--DO NOT MODIFY 
 */
