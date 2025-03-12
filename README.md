@@ -117,12 +117,12 @@ Happy Coding!
 [git-handbook]: https://guides.github.com/introduction/git-handbook/
 [pair-better]: https://hackernoon.com/a-pair-is-better-than-one-e9d4514add9f
 
-| Topic                   | Lecture | Slides | Demo | Solution | Review |
-| ----------------------- | ------- | ------ | ---- | -------- | ------ | --- |
-| Node Env                |         | -      | -    | -        | -      | -   |
-| Node Installation       | [📺][]  |        | -    | -        | -      |
-| Running Node            | [📺][]  |        | -    | -        | -      |
-| Introduction to Modules | [📺][]  |        | -    | -        | -      |
+| Topic                   | Kahoot | Slides | Demo | Solution | Review |
+| ----------------------- | ------ | ------ | ---- | -------- | ------ | --- |
+| Node Env                |        | -      | -    | -        | -      | -   |
+| Node Installation       | [📺][] |        | -    | -        | -      |
+| Running Node            | [📺][] |        | -    | -        | -      |
+| Introduction to Modules | [📺][] |        | -    | -        | -      |
 
 #### Day 2: Modules / FS Library / Tic Tac Toe Review
 
@@ -136,11 +136,11 @@ Happy Coding!
 [fs-lib]: https://www.w3schools.com/nodejs/nodejs_filesystem.asp
 [tic-tac-toe]: https://github.com/Stevenhulse14/Tickytackytoey
 
-| Topic             | Lecture | Slides | Demo | Solution | Review |
-| ----------------- | ------- | ------ | ---- | -------- | ------ | --- |
-| Tic-Tac-Toe       |         | -      | -    | -        | -      | -   |
-| Built in Modules  | [📺][]  |        | -    | -        | -      |
-| Fs / OS Library   | [📺][]  |        | -    | -        | -      |
-| HTTP Introduction | [📺][]  |        | -    | -        | -      |
+| Topic             | Kahoot | Slides | Demo | Solution | Review |
+| ----------------- | ------ | ------ | ---- | -------- | ------ | --- |
+| Tic-Tac-Toe       |        | -      | -    | -        | -      | -   |
+| Built in Modules  | [📺][] |        | -    | -        | -      |
+| Fs / OS Library   | [📺][] |        | -    | -        | -      |
+| HTTP Introduction | [📺][] |        | -    | -        | -      |
 
 </details>
