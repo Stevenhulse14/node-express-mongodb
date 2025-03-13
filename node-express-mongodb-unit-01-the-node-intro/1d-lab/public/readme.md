@@ -1,0 +1,1 @@
+This is the directory in which you should place your images and CSS files. Then, reference them in your HTML tags as "filename.jpg" or "style.css", _without_ the "public/" portion.
