@@ -18,6 +18,18 @@ app.get("/cats", async (req, res) => {
   res.send(cats);
 });
 
+// post request
+
+app.post("/cats", (req, res) => {
+  const newCat = req.body;
+  console.log(newCat);
+  cats.push(newCat);
+  res.json({
+    message: " New cat was added ",
+    cat: cats,
+  });
+});
+
 // update request
 
 // fix the update route to work with arrays
@@ -43,7 +55,19 @@ app.put("/cats/:id", (req, res) => {
 
 // configure your POST and DELETE ROUTES !
 // make sure your order is corrent because order matters
+app.delete("/cats/:id", (req, res) => {
+  const catId = +req.params.id; // just a string if you need a number use parseInt() +
+  const initialLen = cats.length;
 
+  // Hey add the cat to the array and add all of them except the cat that we specified
+  cats = cats.filter((cat) => cat.id !== catId);
+
+  if (cats.length < initialLen) {
+    res.json({ message: " cat was successfully deleted ! " });
+  } else {
+    res.status(404).json({ message: "cat not found " });
+  }
+});
 // delete request
 
 app.listen(PORT, () => {
