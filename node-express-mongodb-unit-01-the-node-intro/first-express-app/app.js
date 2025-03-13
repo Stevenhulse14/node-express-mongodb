@@ -1,12 +1,13 @@
 let cats = require("./cats");
 const { readCats } = require("./helper");
-const bodyParser = require("body-parser");
+//const bodyParser = require("body-parser");
 
 const express = require("express");
 const app = express();
 const PORT = 3000;
 
-app.use(bodyParser());
+//app.use(bodyParser());
+app.use(express.json());
 
 app.get("/", (req, res) => {
   res.send(`<h1> Welcome to my First API</h1>`);
