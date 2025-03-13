@@ -1,8 +1,12 @@
-const cats = require("./cats");
+let cats = require("./cats");
 const { readCats } = require("./helper");
+const bodyParser = require("body-parser");
+
 const express = require("express");
 const app = express();
 const PORT = 3000;
+
+app.use(bodyParser());
 
 app.get("/", (req, res) => {
   res.send(`<h1> Welcome to my First API</h1>`);
@@ -22,11 +26,12 @@ app.put("/cats/:id", (req, res) => {
   const catId = parseInt(req.params.id);
   console.log(catId);
   const updatedCats = req.body;
+  console.log(" updatedCat", updatedCats);
 
   const catIndex = cats.findIndex((cat) => cat.id === catId);
 
   if (catIndex !== -1) {
-    cats[catIndex] = [...cats[catIndex], ...updatedCats];
+    cats[catIndex] = { ...cats[catIndex], ...updatedCats };
     res.json({
       message: "Cat updated successfully",
       cat: cats,
@@ -38,6 +43,8 @@ app.put("/cats/:id", (req, res) => {
 
 // configure your POST and DELETE ROUTES !
 // make sure your order is corrent because order matters
+
+// delete request
 
 app.listen(PORT, () => {
   console.log(`Server running at localhost:${PORT}`);
