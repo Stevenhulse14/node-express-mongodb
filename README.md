@@ -143,4 +143,61 @@ Happy Coding!
 | Fs / OS Library   | [📺][] |        | -    | -        | -      |
 | HTTP Introduction | [📺][] |        | -    | -        | -      |
 
+#### Day 3: HTTP
+
+- Pre-Work:
+
+  - [📖 Node.js Modules ][nodejs-modules]
+  - [📖 Fs Library][fs-lib]
+  - [📖 Tic Tac Toe Proj][tic-tac-toe]
+
+[nodejs-modules]: https://nodejs.org/api/modules.html
+[fs-lib]: https://www.w3schools.com/nodejs/nodejs_filesystem.asp
+[tic-tac-toe]: https://github.com/Stevenhulse14/Tickytackytoey
+
+| Topic             | Kahoot | Slides | Demo | Solution | Review |
+| ----------------- | ------ | ------ | ---- | -------- | ------ | --- |
+| Tic-Tac-Toe       |        | -      | -    | -        | -      | -   |
+| Built in Modules  | [📺][] |        | -    | -        | -      |
+| Fs / OS Library   | [📺][] |        | -    | -        | -      |
+| HTTP Introduction | [📺][] |        | -    | -        | -      |
+
+#### Day 4: Express Demo
+
+- Pre-Work:
+
+  - [📖 Node.js Modules ][nodejs-modules]
+  - [📖 Fs Library][fs-lib]
+  - [📖 Tic Tac Toe Proj][tic-tac-toe]
+
+[nodejs-modules]: https://nodejs.org/api/modules.html
+[fs-lib]: https://www.w3schools.com/nodejs/nodejs_filesystem.asp
+[tic-tac-toe]: https://github.com/Stevenhulse14/Tickytackytoey
+
+| Topic             | Kahoot | Slides | Demo | Solution | Review |
+| ----------------- | ------ | ------ | ---- | -------- | ------ | --- |
+| Tic-Tac-Toe       |        | -      | -    | -        | -      | -   |
+| Built in Modules  | [📺][] |        | -    | -        | -      |
+| Fs / OS Library   | [📺][] |        | -    | -        | -      |
+| HTTP Introduction | [📺][] |        | -    | -        | -      |
+
+#### Day 5: HTTP/Express LAB
+
+- Pre-Work:
+
+  - [📖 Node.js Modules ][nodejs-modules]
+  - [📖 Fs Library][fs-lib]
+  - [📖 Tic Tac Toe Proj][tic-tac-toe]
+
+[nodejs-modules]: https://nodejs.org/api/modules.html
+[fs-lib]: https://www.w3schools.com/nodejs/nodejs_filesystem.asp
+[tic-tac-toe]: https://github.com/Stevenhulse14/Tickytackytoey
+
+| Topic             | Kahoot | Slides | Demo | Solution | Review |
+| ----------------- | ------ | ------ | ---- | -------- | ------ | --- |
+| Tic-Tac-Toe       |        | -      | -    | -        | -      | -   |
+| Built in Modules  | [📺][] |        | -    | -        | -      |
+| Fs / OS Library   | [📺][] |        | -    | -        | -      |
+| HTTP Introduction | [📺][] |        | -    | -        | -      |
+
 </details>
