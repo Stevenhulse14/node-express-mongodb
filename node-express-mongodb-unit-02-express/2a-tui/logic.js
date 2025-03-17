@@ -1,5 +1,7 @@
 // 1. Write a function that takes degrees fahrenheit and returns the temperature in degrees celsius.
-
+function fahrenheitToCelsius(degrees) {
+  return (degrees - 32) * (5 / 9);
+}
 // You can convert degrees fahrenheit to degrees celsius by:
 // 1. subtracting 32 from the degrees fahrenheit
 // 2. multiplying the result by 5
@@ -27,7 +29,9 @@
  * @param {number} degrees - The temperature in degrees celsius.
  * @returns {number} - The temperature in degrees fahrenheit.
  */
-
+function celsiusToFahrenheit(degrees) {
+  return degrees * (9 / 5) + 32;
+}
 // 5. (Don't forget to do 4 at the bottom of the file first and test it!) Write a function that takes a temperature and a scale (either "f" for fahrenheit or "c" for celsius) and returns the temperature in the other scale. As a bonus, use the functions you wrote above to do this.
 
 /**
@@ -39,8 +43,23 @@
  * @returns {number} - The temperature in the other scale.
  */
 
+function convertTemperature(degrees, scale) {
+  if (scale.toLowerCase() === "f" && typeof scale === "string") {
+    return fahrenheitToCelsius(degrees);
+  } else if (scale.toLowerCase() === "c" && typeof scale === "string") {
+    return celsiusToFahrenheit(degrees);
+  } else {
+    throw new Error("should return null if the scale is not 'f' or 'c'");
+  }
+}
 // 2. Export the fahrenheitToCelsius function in an object so that it can be imported in other files. Then run the tests to make sure your function works.
 
 // 4. Export the celsiusToFahrenheit function in the object at the bottom of the file. Then run the tests to make sure your function works.
 
 // 6. Export the convertTemperature function in the object at the bottom of the file. Then run the tests to make sure your function works.
+
+module.exports = {
+  fahrenheitToCelsius,
+  celsiusToFahrenheit,
+  convertTemperature,
+};

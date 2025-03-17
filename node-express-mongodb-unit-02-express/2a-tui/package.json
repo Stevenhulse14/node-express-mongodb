@@ -1,0 +1,17 @@
+{
+  "name": "2a-tui",
+  "version": "1.0.0",
+  "description": "### Introduction",
+  "main": "interface.js",
+  "scripts": {
+    "test": "jest",
+    "test-watch": "jest --watch-all"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
