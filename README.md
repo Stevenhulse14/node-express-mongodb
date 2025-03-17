@@ -147,12 +147,16 @@ Happy Coding!
 [fs-lib]: https://www.w3schools.com/nodejs/nodejs_filesystem.asp
 [tic-tac-toe]: https://github.com/Stevenhulse14/Tickytackytoey
 
+```
+
 | Topic             | Kahoot | Slides | Demo                     | Solution | Review |
 | ----------------- | ------ | ------ | ------------------------ | -------- | ------ | --- |
 | Tic-Tac-Toe       |        | -      | - [🧑‍💻][tic-tac-toe-demo] | -        | -      | -   |
 | Built in Modules  | [📺][] |        | -                        | -        | -      |
 | Fs / OS Library   | [📺][] |        | -                        | -        | -      |
 | HTTP Introduction | [📺][] |        | -                        | -        | -      |
+
+```
 
 [//]: # " Paste in table above >> [🧑‍💻][tic-tac-toe-demo] "
 [tic-tac-toe-demo]: https://github.com/Stevenhulse14/node-express-mongodb/tree/main/tic-tac-toe-solution
@@ -167,12 +171,16 @@ Happy Coding!
 [http-modules]: https://nodejs.org/api/http.html
 [express-doc]: https://expressjs.com/
 
+```
+
 | Topic             | Kahoot | Slides | Demo | Solution | Review |
 | ----------------- | ------ | ------ | ---- | -------- | ------ | --- |
 | Tic-Tac-Toe       |        | -      | -    | -        | -      | -   |
 | Built in Modules  | [📺][] |        | -    | -        | -      |
 | Fs / OS Library   | [📺][] |        | -    | -        | -      |
 | HTTP Introduction | [📺][] |        | -    | -        | -      |
+
+```
 
 #### Day 4: Express Demo
 
@@ -184,6 +192,8 @@ Happy Coding!
 [express-deep-dive]: https://www.youtube.com/watch?v=Oe421EPjeBE&t=18185s&ab_channel=freeCodeCamp.org
 [35-min-video]: https://www.youtube.com/watch?v=SccSCuHhOw0&ab_channel=WebDevSimplified
 
+```
+
 | Topic        | Kahoot | Slides | Demo | Solution | Review |
 | ------------ | ------ | ------ | ---- | -------- | ------ | --- |
 | Express Demo |        | -      | -    | -        | -      | -   |
@@ -191,9 +201,14 @@ Happy Coding!
 |              | [📺][] |        | -    | -        | -      |
 |              | [📺][] |        | -    | -        | -      |
 
+
+```
+
 #### Day 5: HTTP/Express LAB
 
 - Pre-Work:
+
+```
 
 | Topic | Kahoot | Slides | Demo | Solution | Review |
 | ----- | ------ | ------ | ---- | -------- | ------ | --- |
@@ -201,5 +216,7 @@ Happy Coding!
 |       | [📺][] |        | -    | -        | -      |
 |       | [📺][] |        | -    | -        | -      |
 |       | [📺][] |        | -    | -        | -      |
+
+```
 
 </details>
