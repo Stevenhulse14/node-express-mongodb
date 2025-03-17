@@ -1,3 +1,5 @@
+
+```
 /portfolio-lab
 |-- server.js
 |-- public/
@@ -7,3 +9,4 @@
 | |-- index.html
 | |-- projects.html
 | |-- 404.html
+```
