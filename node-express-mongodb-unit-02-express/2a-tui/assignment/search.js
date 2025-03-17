@@ -1,4 +1,4 @@
-const emojis = require('./emojis.js');
+const emojis = require("./emojis.js");
 
 /**
  * search()
@@ -7,6 +7,14 @@ const emojis = require('./emojis.js');
  * @param {string} searchStr - The query to match.
  * @returns {Object[]} - An array of objects where each object is a matching emoji.
  */
-const search = function() {}
+const search = function (substr) {
+  const lowercase_substr = substr.toLowerCase();
+
+  return emojis.filter((emoji) =>
+    emoji.name.toLowerCase().includes(lowercase_substr)
+  );
+};
+
+//console.log(search("HEART"));
 
 module.exports = search;
