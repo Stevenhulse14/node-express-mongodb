@@ -117,12 +117,16 @@ Happy Coding!
 [git-handbook]: https://guides.github.com/introduction/git-handbook/
 [pair-better]: https://hackernoon.com/a-pair-is-better-than-one-e9d4514add9f
 
+```
+
 | Topic                   | Kahoot | Slides | Demo                | Solution             | Review |
 | ----------------------- | ------ | ------ | ------------------- | -------------------- | ------ | --- |
 | Node Env                |        | -      | - [🧑‍💻][node-demo]   | -                    | -      | -   |
 | Node Installation       | [📺][] |        | -                   | -                    | -      |
 | Running Node            | [📺][] |        | -                   | - [👾][running-node] | -      |
 | Introduction to Modules | [📺][] |        | - [🧑‍💻][module-demo] | -                    | -      |
+
+```
 
 [//]: # " Paste in table above >> [🧑‍💻][node-demo] "
 [node-demo]: https://github.com/Stevenhulse14/node-express-mongodb/tree/main/node-express-mongodb-unit-00-the-node-environment/node-demo
