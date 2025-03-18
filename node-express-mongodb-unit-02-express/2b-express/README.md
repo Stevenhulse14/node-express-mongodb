@@ -145,7 +145,7 @@ app.all("*", (req, res) => {
 });
 ```
 
-An asterisk `*` is commonly used to represent "anything" when it comes to setting up responses to URLs. Make sure to try and visit various URL extensions once the server is up and running.
+An asterisk `*` is commonly used to represent "everything" when it comes to setting up responses to URLs. Make sure to try and visit various URL extensions once the server is up and running.
 
 ## What is an API
 
