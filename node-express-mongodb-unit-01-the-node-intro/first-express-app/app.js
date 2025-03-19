@@ -2,6 +2,13 @@ let cats = require("./cats");
 const { readCats } = require("./helper");
 //const bodyParser = require("body-parser");
 
+/**
+ * C reate
+ * R ead
+ * U pdate
+ * D elete
+ */
+
 const express = require("express");
 const app = express();
 const PORT = 3000;
@@ -20,10 +27,17 @@ app.get("/cats", async (req, res) => {
 });
 
 // post request
-
+/**
+  is sending back some data 
+  {
+    name: "Steven",
+    id: 0002,
+    role: "Software Engineer "
+  }
+ */
 app.post("/cats", (req, res) => {
   const newCat = req.body;
-  console.log(newCat);
+  console.log("Hey this coming from the body ", newCat);
   cats.push(newCat);
   res.json({
     message: " New cat was added ",
@@ -70,6 +84,12 @@ app.delete("/cats/:id", (req, res) => {
   }
 });
 // delete request
+
+app.all("*", (req, res) => {
+  res.status(404).send({
+    message: "Hey your webpage was not found buddy try again !",
+  });
+});
 
 app.listen(PORT, () => {
   console.log(`Server running at localhost:${PORT}`);

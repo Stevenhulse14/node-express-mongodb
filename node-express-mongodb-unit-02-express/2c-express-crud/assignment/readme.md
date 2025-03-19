@@ -38,7 +38,8 @@ You are on a team for a company called Sandwich King! They plan on placing snack
     "swiss",
     "provolone",
     "mozzarella",
-    "pepper jack"
+    "pepper jack",
+    "Muenster"
   ],
 
   "veggies": [
