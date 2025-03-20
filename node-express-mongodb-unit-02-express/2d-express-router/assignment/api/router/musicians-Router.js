@@ -60,4 +60,44 @@ router.put("/:id", (req, res) => {
   }
 });
 
+// PATCH Route: Update musician partially by ID
+router.patch("/:id", (req, res) => {
+  const { id } = req.params;
+  const updateFields = req.body;
+
+  const itemIndex = data.findIndex((item) => item.id === id);
+
+  if (itemIndex === -1) {
+    return res.status(404).json({
+      message: "Item doesn't exist",
+    });
+  }
+
+  // Merge existing data with updated fields
+  data[itemIndex] = { ...data[itemIndex], ...updateFields };
+
+  return res.status(200).json({
+    message: "Item successfully updated",
+    data: data[itemIndex],
+  });
+});
+
+// DELETE Route: Delete musician by ID
+router.delete("/:id", (req, res) => {
+  const { id } = req.params;
+
+  if (!data.find((item) => item.id === id)) {
+    return res.status(404).json({
+      message: "Item doesn't exist",
+    });
+  }
+
+  data = data.filter((item) => item.id !== id);
+
+  return res.status(200).json({
+    message: "Item successfully deleted",
+    data,
+  });
+});
+
 module.exports = router;
