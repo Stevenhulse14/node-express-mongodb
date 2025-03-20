@@ -20,6 +20,9 @@ app.get("/ingredients", (req, res) => {
   res.status(200).send(ingredients);
 });
 
+//lunch
+
+//dinner
 app.get("/ingredients/:name", (req, res) => {
   const item = req.params.name;
   res.status(200).send(ingredients[item]);
