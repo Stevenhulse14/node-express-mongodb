@@ -15,6 +15,7 @@ app.use(logger("dev"));
 app.use(express.urlencoded({ extended: false }));
 
 app.use("/api", require("./api"));
+app.use("/login", require("./api/auth"));
 
 app.listen(PORT, () => {
   console.log(`Your port is running on PORT: ${PORT}  (ink, printer)`);
