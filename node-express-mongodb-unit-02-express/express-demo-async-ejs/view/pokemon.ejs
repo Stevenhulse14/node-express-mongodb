@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>Pokemon Page</header>
+    <div class="pokemon-container">
+      <% data.forEach(item=>{ %>
+      <div class="pokemonlist">
+        <!-- <img src="<%= item.img %>" alt="<%= item.name %>" /> -->
+        <h3><%= item.name %></h3>
+        <p><%= item.type %></p>
+      </div>
+      <% }) %>
+    </div>
+    <div class="generatorcontainer">
+      <div class="pokemoncontainer">
+          <img id="pokemon"></img>
+        </div>
+      
+      <div class="buttoncontainer">
+          <button id="btn">⚽</button>
+          <button id="stone">🪨</button>
+          <button id="catch">🎣</button>
+      </div>
+  </div>
+  
+  <div id="teams">
+      <div class="teamcontainer"></div>
+      <div class="opponentteam"></div>
+  </div>
+    <footer>Pokemon Page Footer</footer>
+    <script type="text/html" src="../server.js"></script>
+   <script type="text/html" src="../public/script.js"></script>
+   <script>
+let pokemon_team_state = [];
+let opponents_team = [];
+
+/**
+ pokemon_name{
+ img: "img_url"
+ moves:["wing attack","peck", "water gun", "sand-attack"]
+ }
+ */
+
+const button = document.querySelector("button");
+const rock = document.querySelector("#stone");
+const pokemon = document.querySelector("img");
+const catchbtn = document.querySelector("#catch");
+const team = document.querySelector(".teamcontainer");
+const opponentsteam = document.querySelector(".opponentteam");
+
+button.addEventListener("click", async() => {
+  try {
+    const value = await apiRequest();
+  console.log("value", value);
+  pokemon.src = value;
+    
+  } catch (error) {
+    console.error(error)
+  }
+});
+
+rock.addEventListener("click", async () => {
+  try {
+    const img = document.createElement("img");
+  const val = await apiRequest();
+  img.src = pokemon.src;
+  console.log(val);
+  if (opponents_team.length < 6) {
+    opponentsteam.append(img);
+    opponents_team.push(pokemon.src);
+    pokemon.src = val;
+  }
+  } catch (error) {
+    console.error(error);
+    
+  }
+  //pokemon.src = "";
+});
+
+catchbtn.addEventListener("click", () => {
+  pokemon_team_state.push(pokemon.src);
+  addPokemonDom();
+  console.log(pokemon_team_state);
+});
+// task create a event listener that grabs the rock !
+
+async function apiRequest() {
+  try {
+    const endpoint = `https://pokeapi.co/api/v2/pokemon/${randomize()}`;
+    const request = await fetch(endpoint);
+    const data = await request.json();
+    console.log("api Request",data);
+    return data.sprites.front_shiny;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+function addPokemonDom() {
+  if (pokemon_team_state.length <= 6) {
+    team.innerHTML = "";
+    pokemon_team_state.forEach((src) => {
+      const img = document.createElement("img");
+      img.src = src;
+      console.log(src);
+      team.append(img);
+    });
+  }
+}
+
+// tools helper function
+const randomize = () => {
+  return Math.floor(Math.random() * 900 + 1);
+};
+   
+   </script>
+  </body>
+</html>
