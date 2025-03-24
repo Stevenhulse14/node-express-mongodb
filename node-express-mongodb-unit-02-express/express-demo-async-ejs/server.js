@@ -2,6 +2,7 @@ const express = require("express");
 const logger = require("morgan");
 const path = require("path");
 const pokemonData = require("./data/pokemon-data");
+const apiRequest = require("./util/apiRequest");
 //const ejs = require("ejs");
 
 const app = express();
@@ -41,10 +42,16 @@ app.get("/about", (req, res) => {
   }
 });
 
-app.get("/pokemon", (req, res) => {
+app.get("/pokemon", async (req, res) => {
   try {
+    const data = await apiRequest();
     // res.sendFile(path.join(__dirname, "view", "pokemon.html"));
-    res.render("pokemon", { data: pokemonData });
+    // const newPokemon = {
+    //   name: response.name,
+    //   image: response.sprites.front_shiny,
+    // };
+    console.log(data);
+    res.render("pokemon", { data: [data] });
   } catch (error) {
     console.error(error);
   }

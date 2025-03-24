@@ -19,7 +19,7 @@
     </div>
     <div class="generatorcontainer">
       <div class="pokemoncontainer">
-          <img id="pokemon"></img>
+          <img id="pokemon" src="<%=data[0].img %>"></img>
         </div>
       
       <div class="buttoncontainer">
@@ -90,6 +90,8 @@ catchbtn.addEventListener("click", () => {
 });
 // task create a event listener that grabs the rock !
 
+
+// Incorperate the api request function into our Client into our Server
 async function apiRequest() {
   try {
     const endpoint = `https://pokeapi.co/api/v2/pokemon/${randomize()}`;

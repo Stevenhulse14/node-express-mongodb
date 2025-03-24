@@ -75,3 +75,5 @@ const randomize = () => {
 };
 
 console.log("hey are you missing anything ");
+
+module.exports = apiRequest;
