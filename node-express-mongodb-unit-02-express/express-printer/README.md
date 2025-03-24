@@ -58,3 +58,6 @@ PUT /orders/:id Update order status (Admin)
 
 DELETE (admin)
 DELETE (admin)
+
+Don't forget to make your .env file and get the sensative data from that file.
+als we have a .gitignore file that we use to place node_modules, .env and other files as we progress we will learn more about others .
