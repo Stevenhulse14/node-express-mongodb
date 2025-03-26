@@ -7,4 +7,6 @@ Router.get("/", (req, res) => {
   res.render("teams", {});
 });
 
+Router.post("/", (req, res) => {});
+
 module.exports = Router;
