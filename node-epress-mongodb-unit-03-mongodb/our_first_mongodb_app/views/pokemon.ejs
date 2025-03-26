@@ -3,22 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
     <title>Pokemon</title>
   </head>
   <body>
-    <div>
-      <h1><%= name %></h1>
+    <div class="container">
+      <h1 class="pokemon-name"><%= name %></h1>
+      <div class="moves-flex">
+        <div class="moves-container">
+          <div class="move"><%= moves[0] %></div>
+          <div class="move"><%= moves[1] %></div>
+          <div class="move"><%= moves[2] %></div>
+          <div class="move"><%= moves[3] %></div>
+        </div>
+      </div>
 
-      <ul>
-        <li><%= moves[0]%></li>
-        <li><%= moves[1]%></li>
-        <li><%= moves[2]%></li>
-        <li><%= moves[3]%></li>
-      </ul>
+      <div class="sprite-container">
+        <img src="<%= sprite %>" alt="<%= name %>" class="pokemon-sprite" />
+      </div>
 
-      <div>
-        <img src="<%= sprite %>" />
+      <div class="button-container">
+        <button class="btn catch-btn">Catch</button>
+        <button class="btn rock-btn">Throw Rock</button>
+        <button class="btn randomize-btn">Randomize</button>
       </div>
     </div>
+    <script type="module" src="/index.js"></script>
   </body>
 </html>

@@ -29,7 +29,7 @@ app.use("/api", require("./api"));
 //----------------------------------------------------
 app.get("/", (req, res) => {
   //res.send("Hello World");
-  res.sendFile(path.join(__dirname, "views", "home.html"));
+  res.render("home", {});
 });
 
 app.listen(PORT, () => {

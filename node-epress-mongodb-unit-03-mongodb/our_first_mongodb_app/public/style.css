@@ -1,0 +1,101 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #2e3235;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+.pokemon-name {
+  font-size: 2.5rem;
+  color: #ff0000; /* Red */
+  text-shadow: 2px 2px #0000ff; /* Blue shadow */
+}
+
+.moves-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-template-rows: repeat(2, 1fr); /* 2 rows */
+  width: 80%; /* Full width of the container */
+  height: 150px; /* Adjust height as needed */
+  gap: 0; /* No margin or padding between grid items */
+}
+
+.moves-flex {
+  display: flex;
+  justify-content: center;
+  /* margin: auto; */
+}
+.move {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Each move takes up 25% of the container */
+  height: 100%;
+  background-color: #ffcc00; /* Yellow background for moves */
+  color: #000; /* Black text */
+  font-size: 1.2rem;
+  border: 1px solid #333; /* Optional border for clarity */
+  box-sizing: border-box; /* Ensures borders don't affect size */
+}
+
+.sprite-container {
+  margin: 20px 0;
+}
+
+.pokemon-sprite {
+  width: 200px;
+  height: auto;
+  border: 5px solid #896e00; /* Yellow border */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button-container {
+  margin-top: 20px;
+}
+
+.btn {
+  font-size: 1rem;
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s, box-shadow 0.3s;
+  width: 150px; /* Ensures all buttons are the same width */
+  height: 50px; /* Ensures all buttons are the same height */
+  display: inline-block;
+  text-align: center;
+  line-height: 1.5; /* Centers text vertically */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Adds depth */
+}
+
+.catch-btn {
+  background-color: #ff0000; /* Red */
+  color: #fff;
+}
+
+.rock-btn {
+  background-color: #0000ff; /* Blue */
+  color: #fff;
+}
+
+.randomize-btn {
+  background-color: #896e00; /* Yellow */
+  color: #ffffff;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}

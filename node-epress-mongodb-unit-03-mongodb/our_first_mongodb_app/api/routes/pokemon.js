@@ -1,5 +1,6 @@
 const Router = require("express").Router();
-const path = require("path");
+const randomize = require("../../util/helper");
+
 const fetchPokemon = require("../../controller/pokemonContoller");
 // localhost:8000/api/pokemon
 Router.get("/", async (req, res) => {
@@ -7,16 +8,16 @@ Router.get("/", async (req, res) => {
 
   try {
     const { data } = await fetchPokemon();
-    function randomizeMoves(arr) {
-      const newObj = {};
+    // function randomizeMoves(arr) {
+    //   const newObj = {};
 
-      for (let i = 0; i < 4; i++) {
-        const item = Math.floor(Math.random() * data.moves.length + 1);
-        const name = arr[item].move.name;
-        newObj[name] = arr[item];
-      }
-      return newObj;
-    }
+    //   for (let i = 0; i < 4; i++) {
+    //     const item = Math.floor(Math.random() * data.moves.length + 1);
+    //     const name = arr[item].move.name;
+    //     newObj[name] = arr[item];
+    //   }
+    //   return newObj;
+    // }
 
     // ---------------------------------->>
     /**
@@ -50,18 +51,18 @@ Router.get("/", async (req, res) => {
       if we wrap a Object.keys() around that returned value of the object we get back an 
       array of our pokemons moves  [ 'reversal', 'slash', 'attract', 'brick-break' ]
      */
-    console.log(
-      "ALL DATE:",
-      data,
-      "DATA FORMAT 1",
-      randomizeMoves(data.moves),
-      "DATA FORMAT 2",
-      Object.keys(randomizeMoves(data.moves))
-    );
+    // console.log(
+    //   "ALL DATE:",
+    //   data,
+    //   "DATA FORMAT 1",
+    //   randomizeMoves(data.moves),
+    //   "DATA FORMAT 2",
+    //   Object.keys(randomizeMoves(data.moves))
+    // );
     //  -----------------------------------
     res.render("pokemon", {
       name: data.name,
-      moves: Object.keys(randomizeMoves(data.moves)),
+      moves: Object.keys(randomize(data)),
       sprite: data.sprites.front_shiny,
     });
   } catch (error) {

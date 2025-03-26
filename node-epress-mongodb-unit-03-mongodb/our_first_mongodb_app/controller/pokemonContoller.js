@@ -1,8 +1,9 @@
 const axios = require("axios");
+const randomize = require("../util/helper");
 
-const randomize = () => {
-  return Math.floor(Math.random() * 900 + 1);
-};
+// const randomize = () => {
+//   return Math.floor(Math.random() * 900 + 1);
+// };
 
 const fetchPokemon = async () => {
   try {

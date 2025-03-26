@@ -4,7 +4,7 @@ const path = require("path");
 //localhost:8000/api/teams/teams
 Router.get("/", (req, res) => {
   //res.send("Hello from Teams");
-  res.sendFile(path.join(__dirname, "../../views/teams.html"));
+  res.render("teams", {});
 });
 
 module.exports = Router;
