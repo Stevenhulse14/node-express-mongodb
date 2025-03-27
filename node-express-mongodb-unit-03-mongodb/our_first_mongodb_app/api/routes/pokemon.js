@@ -1,6 +1,6 @@
 const Router = require("express").Router();
 const randomize = require("../../util/helper");
-
+const pokemon = require("../../models/pokemonSchema");
 const fetchPokemon = require("../../controller/pokemonContoller");
 
 // localhost:8000/api/pokemon
@@ -65,6 +65,75 @@ Router.get("/", async (req, res) => {
       name: data.name,
       moves: Object.keys(randomize(data)),
       sprite: data.sprites.front_shiny,
+    });
+  } catch (error) {
+    console.error(error);
+  }
+});
+
+Router.post("/", (req, res) => {
+  try {
+    // post data to my pokemon mongodb collection
+    const { name, sprite, moves } = req.body;
+    console.log(name, sprite, moves);
+    const newPokemon = new pokemon({
+      name,
+      sprite,
+      moves,
+    });
+    newPokemon.save();
+    res.status(200).send({
+      message: "Pokemon added to your team",
+      pokemon: newPokemon,
+    });
+  } catch (error) {
+    console.error(error);
+  }
+});
+
+// get all pokemon in our Database
+
+Router.get("/all", async (req, res) => {
+  try {
+    const allPokemon = await pokemon.find({});
+    res.status(200).send({
+      message: "All Pokemon",
+      pokemon: allPokemon,
+    });
+  } catch (error) {
+    console.error(error);
+  }
+});
+
+// update a pokemon in our Database
+
+Router.put("/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { name, sprite, moves } = req.body;
+
+    const updatedPokemon = await pokemon.findByIdAndUpdate(
+      id,
+      { name, sprite, moves },
+      { new: true }
+    );
+    res.status(200).send({
+      message: "Pokemon updated",
+      pokemon: updatedPokemon,
+    });
+  } catch (error) {
+    console.error(error);
+  }
+});
+
+// delete a pokemon in our Database
+
+Router.delete("/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    await pokemon.findByIdAndDelete(id);
+    res.status(200).send({
+      message: "Pokemon deleted",
     });
   } catch (error) {
     console.error(error);
