@@ -8,5 +8,34 @@
   </head>
   <body>
     <h1>TEAMS</h1>
+    <div class="teams-container">
+      <!-- Your Pokémon Team -->
+      <div class="team">
+        <h2>Your Pokémon Team</h2>
+        <ul>
+          <% yourTeam.forEach(pokemon => { %>
+          <li>
+            <img src="<%= pokemon.sprite %>" alt="<%= pokemon.name %>" />
+            <strong><%= pokemon.name %></strong>
+            <p>Moves: <%= pokemon.moves.join(", ") %></p>
+          </li>
+          <% }) %>
+        </ul>
+      </div>
+
+      <!-- Opponent's Pokémon Team -->
+      <div class="team">
+        <h2>Opponent's Pokémon Team</h2>
+        <ul>
+          <% opponentTeam.forEach(pokemon => { %>
+          <li>
+            <img src="<%= pokemon.sprite %>" alt="<%= pokemon.name %>" />
+            <strong><%= pokemon.name %></strong>
+            <p>Moves: <%= pokemon.moves.join(", ") %></p>
+          </li>
+          <% }) %>
+        </ul>
+      </div>
+    </div>
   </body>
 </html>

@@ -8,6 +8,7 @@ const randomize = require("../util/helper");
 const fetchPokemon = async () => {
   try {
     const endpoint = `https://pokeapi.co/api/v2/pokemon/${randomize()}`;
+    // only use axios in the backend.
     const response = await axios(endpoint);
     //console.log(response);
     return response;

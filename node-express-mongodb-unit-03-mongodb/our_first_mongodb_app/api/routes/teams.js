@@ -5,7 +5,11 @@ const path = require("path");
 //localhost:8000/api/teams
 Router.get("/", (req, res) => {
   //res.send("Hello from Teams");
-  res.render("teams", {});
+  console.log("oppteam", oppTeam);
+  res.render("teams", {
+    yourTeam: myTeam,
+    opponentTeam: oppTeam,
+  });
 });
 
 //localhost:8000/api/teams/opp
@@ -18,6 +22,7 @@ Router.post("/opp", (req, res) => {
     });
   }
   oppTeam.push(poke);
+  console.log(oppTeam);
   res.status(200).send({
     message: " Added pokemon to your team",
     team: oppTeam,

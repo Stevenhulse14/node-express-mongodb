@@ -2,6 +2,7 @@ const Router = require("express").Router();
 const randomize = require("../../util/helper");
 
 const fetchPokemon = require("../../controller/pokemonContoller");
+
 // localhost:8000/api/pokemon
 Router.get("/", async (req, res) => {
   //edge case what if the pokemon doesn't have any moves.
