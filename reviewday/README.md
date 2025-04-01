@@ -54,27 +54,68 @@
 
 6.  Order in which they go in ?
     You could create an order but adding an order to something defeats the purpose of knowing what the item does. The context matters. There is technically no order. You can build your websites from scratch and do it in whatever order you want. Best practice is to think about it need basis. Ask yourself, "do I need this?" Order the dependencies of your project based off of need.Think about knowing what tool is and do I need that tool. Make sure you test your code as you are making it, if not you will break your code.
-    7
-    . Implementing API ? ( connecting to different APIs, What is RESTful?)
+
+    7. Implementing API ? ( connecting to different APIs, What is RESTful?)
+       Represational
+       State
+       Transfer
+       It is an architecture style that defines how systems should be interacted with.
+       They are stateless- they dont need to worry about their state- for everything to run will be under request.
+       Examples... google, facebook, they use RESTful API's.
+       Is the pokemon API a restful API. Yes
+       Implementing API's
+       All API's are different, we can have API's that are not only RESTful but in different types ex. SOAP, RPC.
+       API keys - Public and Private/ put them in .env
 
 7.  Backend and, Frontend concepts ?
+    2 ways to run JS front end back end
+    front end the engine (browser) back end the terminal (node runtime envormnment)
+    Node has access to modules such as fs, process, net
+    Browser has access to modules such as window, history, document
+    They can both do it all but one can do things the other cant do and vice-versa
 
-8.  Parsing data from an array into an object ? nd from an object into an array? Nested Structures?
+8.  Parsing data from an array into an object ?
+    How to know paths to get the values of items in objects with arrays in them.
+    and from an object into an array? Nested Structures?
+    Refer to parsing_data.js
+    It comes down to knowing what that data looked likes. Test to see what the data is.
 
 9.  async / await ? syntax, then etc. and when to use async functions?
+    You may need to resolve a promise. You can use call backs to find asynchronis functions. To resolve an async call is to create an async function.
+    Async function is for as to solve ansynchronis activities. If you dont resolve it correctly you will get a pending promise when you solve it you get the data. Dont dismay if you get back a pending promise it means you are hitting the endpoint, you are going in the right direction.
+    Refer to asyn_await.js
 
 10. Middleware ?
-
+    Express middileware is a function that receives the request and response onjects of an HTTP request/response cycle. Basically something the data passes through and whatever the middleware has in it will dictate execution.
 11. Brief MongoDB navigation how to.
+    You will want to look at your projects.
+    Whenever on the page it will default you to work on project.
+    Once in project you can filter/serch for data.
+    There are options like overview and metrics a lot of the options are performanced based and you wont have/need those until you have clients.
+    If you are struggling with MongoDB gooey make projects and familiarize. There are a lot of buttons so try using them and exploring the platform.
+    When creating cluster it will tell you how much space you have.
 
 12. How do frameworks like React, Vue, or Angular improve front-end development? Where does it live in the res and req cycle?
+    refer to package.jason
+    whenever we start it it already comes with demo code, go ito app.js/src
+    So remove all the junk you dont need in code template
+    app.css- delete
+    index.css - delete
+    remove all things you dont need from template
 
 13. Big O Notation - CS theoryBrief-general discussion on web hosting, and what are the different types (shared, VPS, cloud, dedicated)? (How do we choose between hosting providers like Vercel, Netlify, AWS, or DigitalOcean?)? Resources to learn from?
+    We will come back to this question.
 
-14. How to know paths to get the values of items in objects with arrays in them.
-
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-::::::::::::::::::::::'''''````     ```````''::::::::::::::::::::::::::::
+14. How to study outside of class (what to focus, any habits or routines that make self-study more effective)
+    In all honesty you just need to code. The more you do it the better. Just watching it is not enough you may understand some concepts here and there yeah but there is a difference when you do it yourself.
+    Have a study partners, do mock intervies, ask each other techinical questions.
+    One thing I have heard a lot is in the morning before you start anything tackle a quesiton from leap code or a technical question.
+    It gets you mind right for the diy
+    Be curious, look things up, want to learn
+    Be consistent make sure that you are not only working today but everyday. If you work once a week you will not be benefit in the long run, if you work on it daily you add on to the knowlege give yourself a minimum of 20-30 minutes a day. Actually code and read code, familiarize yourself.
+    Hopefully that is enough
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    ::::::::::::::::::::::'''''````     ```````''::::::::::::::::::::::::::::
 :::::::::::::::::'``                 .,,;;,     ```:::::::::::::::::::::::
 ::::::::::::::'`              .,;;!!''`'             ``'':::::::::::::::::
 :::::::::::::'            ,;!!!!''       ,;!!!>           `'::::::::::::::
@@ -118,13 +159,13 @@ MMMMM $$$$$cc,.           .,,cd$$$$$$$$$$P  ::::::::::::::::::::::::::::::
 MMMMP,$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$??""   `'``.zc,`:::::::::::::::::::::
 MMMM d$$$$$$$$$$$$$$$$$$$$$$$$$??""..r zd$$h. d$$$$$h `:::::::::::::::::::
 MMMM $$$$$$$$$$$$$$$$$$$$$$P".,r-"""" d$$$$$$c`$$$$$$$c`::::::::::'''````
-MMMP $$$$$$$$$$$$$$$$$??".,ndP ,c$$$c ?$$$$$$$c`$$$$$$$.`::::::'`.zc$$$$$c
+    MMMP $$$$$$$$$$$$$$$$$??".,ndP ,c$$$c ?$$$$$$$c`$$$$$$$.`::::::'`.zc$$$$$c
 MMM z$$$$$$$$$$$$??"".nmMMMM",$$$$$$$h $$$$$$$$."$$$$$$$ `::' ,c$$$$$$$$$$
 MM>,$$$$$$$$??"".xnMMM"".,..."$$$$$$$$.<$$$$$$$$ ?$$$$$$h `,c$$$$$$$$$$$F
 MM d$$$$$P".,nMMMMMMMP d$$$$$ ?$$$$$$$h $$$$$$$$L $$$$$$$c`$$$$$$$$$$??".:
 P z$$P"_.nMMMPMMMMMMM d$$$$$$L $$$$$$$$c ?$$$$$$$.?$$$$$$$c`$$$$$P""...:::
  -"".nMMMMMMM `MMMMMP $"?$$$$$."$$$$$$$$h $$$$$$$h ?$$$$$$$.`$P"" .:::::::
-.ndMMMMMMMMMM' `MMMM`<$ "$$$$$h ?$$$$$$$$.`$$$$$$$c ?$$$$$$$." ,;,`:::::::
+    .ndMMMMMMMMMM' `MMMM`<$ "$$$$$h ?$$$$$$$$.`$$$$$$$c ?$$$$$$$." ,;,`:::::::
 MMMMMMMMP"",;;<;`MMM,<$$ $$$$$$c $$$$$$$$$ "$$$$$$$hd$$$$$$$$c !!!> `:::::
 MMMPP" ,; "Mmn ,$$$$$$$$c$$$$$$$$$$$$$$$$$$$$$"d$$$P'.!!!!!!!; ::
 ;!!!!!!!!!!!!!!!!!!;`T" d$$$$$$$$$$$$$$$$$$$$$$F<$$$$F z$$P",;!!!!!!!!!> `
@@ -137,49 +178,49 @@ MMMPP" ,; "Mmn ,$$$$$$$$c$$$$$$$$$$$$$$$$$$$$$"d$$$P'.!!!!!!!; ::
 !!!!!!!!!!!!!!!!!! $$$$$$$$$$$$$$$$$$$$$$$$$" ;!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!! $$$$$$$$$$$$$$$$$$$$$$$$F
 
-                             ...,?77??!~~~~!???77?<~....
-                        ..?7`                           `7!..
-                    .,=`          ..~7^`   I                  ?1.
-       ........  ..^            ?`  ..?7!1 .               ...??7
-      .        .7`        .,777.. .I.    . .!          .,7!
-      ..     .?         .^      .l   ?i. . .`       .,^
-       b    .!        .= .?7???7~.     .>r .      .=
-       .,.?4         , .^         1        `     4...
-        J   ^         ,            5       `         ?<.
-       .%.7;         .`     .,     .;                   .=.
-       .+^ .,       .%      MML     F       .,             ?,
-        P   ,,      J      .MMN     F        6               4.
-        l    d,    ,       .MMM!   .t        ..               ,,
-        ,    JMa..`         MMM`   .         .!                .;
-         r   .M#            .M#   .%  .      .~                 .,
-       dMMMNJ..!                 .P7!  .>    .         .         ,,
-       .WMMMMMm  ?^..       ..,?! ..    ..   ,  Z7`        `?^..  ,,
-          ?THB3       ?77?!        .Yr  .   .!   ?,              ?^C
-            ?,                   .,^.` .%  .^      5.
-              7,          .....?7     .^  ,`        ?.
-                `<.                 .= .`'           1
-                ....dn... ... ...,7..J=!7,           .,
-             ..=     G.,7  ..,o..  .?    J.           F
-           .J.  .^ ,,,t  ,^        ?^.  .^  `?~.      F
-          r %J. $    5r J             ,r.1      .=.  .%
-          r .77=?4.    ``,     l ., 1  .. <.       4.,
-          .$..    .X..   .n..  ., J. r .`  J.       `'
-        .?`  .5        `` .%   .% .' L.'    t
-        ,. ..1JL          .,   J .$.?`      .
-                1.          .=` ` .J7??7<.. .;
-                 JS..    ..^      L        7.:
-                   `> ..       J.  4.
-                    +   r `t   r ~=..G.
-                    =   $  ,.  J
-                    2   r   t  .;
-              .,7!  r   t`7~..  j..
-              j   7~L...$=.?7r   r ;?1.
-               8.      .=    j ..,^   ..
-              r        G              .
-            .,7,        j,           .>=.
-         .J??,  `T....... %             ..
-      ..^     <.  ~.    ,.             .D
-    .?`        1   L     .7.........?Ti..l
+                                 ...,?77??!~~~~!???77?<~....
+                            ..?7`                           `7!..
+                        .,=`          ..~7^`   I                  ?1.
+           ........  ..^            ?`  ..?7!1 .               ...??7
+          .        .7`        .,777.. .I.    . .!          .,7!
+          ..     .?         .^      .l   ?i. . .`       .,^
+           b    .!        .= .?7???7~.     .>r .      .=
+           .,.?4         , .^         1        `     4...
+            J   ^         ,            5       `         ?<.
+           .%.7;         .`     .,     .;                   .=.
+           .+^ .,       .%      MML     F       .,             ?,
+            P   ,,      J      .MMN     F        6               4.
+            l    d,    ,       .MMM!   .t        ..               ,,
+            ,    JMa..`         MMM`   .         .!                .;
+             r   .M#            .M#   .%  .      .~                 .,
+           dMMMNJ..!                 .P7!  .>    .         .         ,,
+           .WMMMMMm  ?^..       ..,?! ..    ..   ,  Z7`        `?^..  ,,
+              ?THB3       ?77?!        .Yr  .   .!   ?,              ?^C
+                ?,                   .,^.` .%  .^      5.
+                  7,          .....?7     .^  ,`        ?.
+                    `<.                 .= .`'           1
+                    ....dn... ... ...,7..J=!7,           .,
+                 ..=     G.,7  ..,o..  .?    J.           F
+               .J.  .^ ,,,t  ,^        ?^.  .^  `?~.      F
+              r %J. $    5r J             ,r.1      .=.  .%
+              r .77=?4.    ``,     l ., 1  .. <.       4.,
+              .$..    .X..   .n..  ., J. r .`  J.       `'
+            .?`  .5        `` .%   .% .' L.'    t
+            ,. ..1JL          .,   J .$.?`      .
+                    1.          .=` ` .J7??7<.. .;
+                     JS..    ..^      L        7.:
+                       `> ..       J.  4.
+                        +   r `t   r ~=..G.
+                        =   $  ,.  J
+                        2   r   t  .;
+                  .,7!  r   t`7~..  j..
+                  j   7~L...$=.?7r   r ;?1.
+                   8.      .=    j ..,^   ..
+                  r        G              .
+                .,7,        j,           .>=.
+             .J??,  `T....... %             ..
+          ..^     <.  ~.    ,.             .D
+        .?`        1   L     .7.........?Ti..l
 
 ,`           L  .    .%    .`! `j, 
  .^             .  ..   .` .^ .?7!?7+. 1
