@@ -20,6 +20,6 @@ router.post("/", async (req, res) => {
 
 //localhost:3000/api/users/log-in-user
 //logInUser
-
+// /logInUser
 router.post("/log-in-user", logInUser);
 module.exports = router;
