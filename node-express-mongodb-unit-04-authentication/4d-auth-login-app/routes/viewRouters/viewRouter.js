@@ -3,10 +3,8 @@ const express = require("express");
 const router = express.Router();
 
 // Import functionality from the view controller
-// const {
-//   createUser,
-// } = require("../../controllers/api/usersController");
-
+const { createUser } = require("../../controllers/api/usersController");
+const { renderUserPage } = require("../../controllers/api/viewController");
 const {
   getAllPokemon,
   getOnePokemon,
@@ -102,13 +100,45 @@ router.patch("/update-pokemon/:name", async function (req, res) {
   }
 });
 
-// 6. Set up Signup and Login form-rendering routes.
+router.post("/create-user", async (req, res) => {
+  try {
+    const newUser = await createUser(req.body);
+    res.redirect("/log-in");
+  } catch (error) {
+    console.log(`create user error: `);
+    console.log(error);
+    res.send("<h1>There was an error creating the user</h1>");
+  }
+});
 
+// 6. Set up Signup and Login form-rendering routes.
+// Render a web page where clients can create a user by signing up
+// localhost:3000/sign-up
+router.get("/sign-up", async function renderSignUpForm(req, res) {
+  try {
+    res.render("sign-up");
+  } catch (error) {
+    console.log(`render sign up form error: `);
+    console.log(error);
+  }
+});
+
+// Render a web page where clients can log in using their credentials
+// localhost:3000/log-in
+router.get("/log-in", async function (req, res) {
+  try {
+    res.render("log-in");
+  } catch (error) {
+    console.log(`render log in form error: `);
+    console.log(error);
+  }
+});
 // localhost:3000/create-user
 /*
   12. Set up front-end route for the user page
 */
-
+//localhost:3000/user
+router.get("/user", renderUserPage);
 /*
   17. Set up log out route to end sessions
 */

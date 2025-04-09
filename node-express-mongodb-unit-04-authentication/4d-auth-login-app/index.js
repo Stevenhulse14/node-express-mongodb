@@ -12,7 +12,9 @@ const connectToMongoDb = require("./database/connectToMongoDb");
 /*
   8. Set up necessary modules for login sessions
 */
-
+require("dotenv").config();
+const cookieParser = require("cookie-parser");
+const sessions = require("express-session");
 /*
   Setting up middleware
 */
@@ -31,10 +33,22 @@ app.use(methodOverride("_method"));
 /*
   9. Set up cookie parser middleware
 */
-
+app.use(cookieParser(process.env.COOKIE_SECRET));
 /*
   10. Set up the login session
 */
+// 24 hours in milliseconds
+const oneDay = 1000 * 60 * 60 * 24;
+
+// session middleware
+app.use(
+  sessions({
+    secret: process.env.COOKIE_SECRET,
+    saveUninitialized: false,
+    cookie: { maxAge: oneDay },
+    resave: false,
+  })
+);
 
 /*
   Connecting routers, using URL extensions
@@ -42,10 +56,11 @@ app.use(methodOverride("_method"));
 // Back-end
 const pokemonRouter = require("./routes/api/pokemonRouter");
 app.use("/api/pokemons", pokemonRouter);
-
 /*
   4. Plug in the user router
 */
+const usersRouter = require("./routes/api/usersRouter");
+app.use("/api/users", usersRouter);
 
 // Front-end
 const viewsRouter = require("./routes/viewRouters/viewRouter");
