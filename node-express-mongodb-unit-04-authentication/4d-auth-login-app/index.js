@@ -47,7 +47,6 @@ app.use("/api/pokemons", pokemonRouter);
   4. Plug in the user router
 */
 
-
 // Front-end
 const viewsRouter = require("./routes/viewRouters/viewRouter");
 app.use("/", viewsRouter);

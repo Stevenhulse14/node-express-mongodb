@@ -3,9 +3,9 @@ const express = require("express");
 const router = express.Router();
 
 // Import functionality from the view controller
-const {
-  createUser,
-} = require("../../controllers/api/usersController");
+// const {
+//   createUser,
+// } = require("../../controllers/api/usersController");
 
 const {
   getAllPokemon,
@@ -13,7 +13,7 @@ const {
   deleteOnePokemon,
   createOnePokemon,
   updateOnePokemon,
-} = require('../../controllers/api/pokemonController');
+} = require("../../controllers/api/pokemonController");
 
 router.get("/", (_, res) => {
   res.render("index");
@@ -29,7 +29,7 @@ router.get("/pokemons", async function (_, res) {
   } catch (error) {
     console.log(error);
   }
-})
+});
 
 // localhost:3000/one-pokemon/:name
 router.get("/one-pokemon/:name", async function (req, res) {
@@ -40,36 +40,34 @@ router.get("/one-pokemon/:name", async function (req, res) {
   } catch (error) {
     console.log(error);
   }
-})
+});
 
 // localhost:3000/delete-pokemon/:name
-router.delete('/delete-pokemon/:name', async function (req, res) {
+router.delete("/delete-pokemon/:name", async function (req, res) {
   try {
     await deleteOnePokemon(req.params.name);
-    res.redirect('/pokemons');
+    res.redirect("/pokemons");
   } catch (error) {
     console.log(error);
-    res.redirect('/pokemons');
+    res.redirect("/pokemons");
   }
-})
+});
 
 // localhost:3000/create-pokemon-form
-router.get("/create-pokemon-form", async function(_, res) {
+router.get("/create-pokemon-form", async function (_, res) {
   try {
     res.render("create-pokemon");
   } catch (error) {
     console.log(error);
   }
-})
+});
 
 // localhost:3000/create-pokemon
-router.post("/create-pokemon", async function(req, res) {
+router.post("/create-pokemon", async function (req, res) {
   try {
     const newPokemon = {
       ...req.body,
-      moves: req.body.moves
-        .split(',')
-        .map((move) => move.trim()),
+      moves: req.body.moves.split(",").map((move) => move.trim()),
     };
 
     const pokemon = await createOnePokemon(newPokemon);
@@ -80,9 +78,8 @@ router.post("/create-pokemon", async function(req, res) {
   }
 });
 
-
 // localhost:3000/update-pokemon-form/:name
-router.get("/update-pokemon-form/:name", async function(req, res) {
+router.get("/update-pokemon-form/:name", async function (req, res) {
   try {
     // Target the correct document to be updated
     const pokemon = await getOnePokemon(req.params.name);
@@ -92,10 +89,10 @@ router.get("/update-pokemon-form/:name", async function(req, res) {
   } catch (error) {
     console.log(error);
   }
-})
+});
 
 // localhost:3000/update-pokemon/:name
-router.patch('/update-pokemon/:name', async function (req, res) {
+router.patch("/update-pokemon/:name", async function (req, res) {
   try {
     const pokemon = await updateOnePokemon(req.params.name, req.body);
     res.redirect(`/one-pokemon/${pokemon.name}`);
@@ -103,7 +100,7 @@ router.patch('/update-pokemon/:name', async function (req, res) {
     console.log(error);
     res.redirect(`/one-pokemon/${req.params.name}`);
   }
-})
+});
 
 // 6. Set up Signup and Login form-rendering routes.
 
