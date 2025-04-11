@@ -221,8 +221,6 @@ Happy Coding!
 
 </details>
 
-Awesome! Here's a continuation of your Week 1 curriculum with detailed outlines for **Week 2**, **Week 3**, and **Week 4**, maintaining your formatting and expanding on Express, Middleware, Routing, MongoDB, and CRUD principles:
-
 ---
 
 ### **Week 2: Express, Routing, Middleware, and RESTful APIs**
@@ -491,4 +489,3 @@ Awesome! Here's a continuation of your Week 1 curriculum with detailed outlines 
 
 ---
 
-Let me know if you want me to bundle these into a downloadable `.md` file or HTML page for easier student access!
