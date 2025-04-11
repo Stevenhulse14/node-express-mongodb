@@ -221,3 +221,274 @@ Happy Coding!
 
 </details>
 
+Awesome! Here's a continuation of your Week 1 curriculum with detailed outlines for **Week 2**, **Week 3**, and **Week 4**, maintaining your formatting and expanding on Express, Middleware, Routing, MongoDB, and CRUD principles:
+
+---
+
+### **Week 2: Express, Routing, Middleware, and RESTful APIs**
+
+<details><summary>Click to view</summary>
+
+#### Day 1: Express Routing
+
+- Pre-Work:
+
+  - [📖 Express Routing Docs][express-routing]
+  - [📖 RESTful Routes Overview][restful-routes]
+
+[express-routing]: https://expressjs.com/en/guide/routing.html  
+[restful-routes]: https://dev.to/avxkim/restful-api-in-express-js-3f1
+
+```
+| Topic            | Kahoot | Slides | Demo                       | Solution                     | Review |
+| ---------------- | ------ | ------ | -------------------------- | ---------------------------- | ------ |
+| Express Routing  |        | -      | - [🧑‍💻][routing-demo]      | -                            | -      |
+| REST Overview    | [📺][] |        | -                          | -                            | -      |
+```
+
+[routing-demo]: https://github.com/Stevenhulse14/node-express-mongodb/tree/main/unit-02-routing-demo
+
+---
+
+#### Day 2: Middleware & Custom Functions
+
+- Pre-Work:
+
+  - [📖 Express Middleware][middleware-doc]
+  - [📖 Custom Middleware Explained][custom-middleware]
+
+[middleware-doc]: https://expressjs.com/en/guide/using-middleware.html  
+[custom-middleware]: https://www.digitalocean.com/community/tutorials/expressjs-middleware
+
+```
+| Topic              | Kahoot | Slides | Demo                       | Solution | Review |
+| ------------------ | ------ | ------ | -------------------------- | -------- | ------ |
+| Middleware         |        | -      | - [🧑‍💻][middleware-demo]   | -        | -      |
+| Custom Middleware  | [📺][] |        | -                          | -        | -      |
+```
+
+[middleware-demo]: https://github.com/Stevenhulse14/node-express-mongodb/tree/main/unit-02-middleware
+
+---
+
+#### Day 3: HTTP Methods & RESTful API Patterns
+
+- Pre-Work:
+
+  - [📖 REST Methods][rest-methods]
+  - [📖 CRUD in Express][crud-express]
+
+[rest-methods]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods  
+[crud-express]: https://zellwk.com/blog/crud-express-mongodb/
+
+```
+| Topic             | Kahoot | Slides | Demo                       | Solution | Review |
+| ----------------- | ------ | ------ | -------------------------- | -------- | ------ |
+| REST Methods      |        | -      | - [🧑‍💻][rest-method-demo]  | -        | -      |
+| CRUD Overview     | [📺][] |        | -                          | -        | -      |
+```
+
+[rest-method-demo]: https://github.com/Stevenhulse14/node-express-mongodb/tree/main/unit-02-crud-basics
+
+---
+
+#### Day 4: Express Review + Mini Project (REST API)
+
+```
+| Activity            | Kahoot | Slides | Demo | Solution | Review |
+| ------------------- | ------ | ------ | ---- | -------- | ------ |
+| Build a REST API    |        | -      | -    | -        | -      |
+| Peer Review / Share |        |        |      |          |        |
+```
+
+---
+
+#### Day 5: LAB - Express CRUD API
+
+- Objective: Build a small API for a fictional app (e.g., Book Manager or Pet Tracker)
+
+```
+| Topic       | Kahoot | Slides | Demo | Solution | Review |
+| ----------- | ------ | ------ | ---- | -------- | ------ |
+| CRUD Lab    |        |        |      |          |        |
+```
+
+</details>
+
+---
+
+### **Week 3: MongoDB Integration and Full CRUD**
+
+<details><summary>Click to view</summary>
+
+#### Day 1: MongoDB Basics & Atlas Setup
+
+- Pre-Work:
+
+  - [📖 Intro to MongoDB][mongo-intro]
+  - [📖 MongoDB Atlas Guide][atlas-guide]
+
+[mongo-intro]: https://www.mongodb.com/docs/manual/introduction/  
+[atlas-guide]: https://www.mongodb.com/basics/mongodb-atlas-tutorial
+
+```
+| Topic         | Kahoot | Slides | Demo                        | Solution | Review |
+| ------------- | ------ | ------ | --------------------------- | -------- | ------ |
+| MongoDB Intro |        | -      | - [🧑‍💻][mongo-demo]         | -        | -      |
+| Atlas Setup   | [📺][] |        | -                           | -        | -      |
+```
+
+[mongo-demo]: https://github.com/Stevenhulse14/node-express-mongodb/tree/main/unit-03-mongodb-intro
+
+---
+
+#### Day 2: Mongoose & Schema Design
+
+- Pre-Work:
+
+  - [📖 Mongoose Docs][mongoose-docs]
+  - [📖 Schema Design Basics][schema-design]
+
+[mongoose-docs]: https://mongoosejs.com/docs/index.html  
+[schema-design]: https://dev.to/loujaybee/mongoose-schema-design-best-practices-3om3
+
+```
+| Topic             | Kahoot | Slides | Demo                          | Solution | Review |
+| ----------------- | ------ | ------ | ----------------------------- | -------- | ------ |
+| Mongoose Intro    |        | -      | - [🧑‍💻][mongoose-demo]        | -        | -      |
+| Schema Creation   | [📺][] |        | -                             | -        | -      |
+```
+
+[mongoose-demo]: https://github.com/Stevenhulse14/node-express-mongodb/tree/main/unit-03-mongoose-schema
+
+---
+
+#### Day 3: CRUD with MongoDB
+
+- Pre-Work:
+
+  - [📖 Full CRUD Tutorial][mongo-crud]
+
+[mongo-crud]: https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose
+
+```
+| Topic           | Kahoot | Slides | Demo                         | Solution | Review |
+| --------------- | ------ | ------ | ---------------------------- | -------- | ------ |
+| Mongo CRUD      |        | -      | - [🧑‍💻][mongo-crud-demo]     | -        | -      |
+| Data Validation | [📺][] |        | -                            | -        | -      |
+```
+
+[mongo-crud-demo]: https://github.com/Stevenhulse14/node-express-mongodb/tree/main/unit-03-crud-with-mongo
+
+---
+
+#### Day 4: Connecting All Pieces
+
+```
+| Activity                      | Kahoot | Slides | Demo | Solution | Review |
+| -----------------------------| ------ | ------ | ---- | -------- | ------ |
+| Fullstack API (Books, Pets)  |        | -      | -    | -        | -      |
+```
+
+---
+
+#### Day 5: LAB - Mongo CRUD App
+
+```
+| Topic          | Kahoot | Slides | Demo | Solution | Review |
+| -------------- | ------ | ------ | ---- | -------- | ------ |
+| MongoDB Lab    |        |        |      |          |        |
+```
+
+</details>
+
+---
+
+### **Week 4: Authentication & Sessions**
+
+<details><summary>Click to view</summary>
+
+#### Day 1: Hashing Passwords with Bcrypt
+
+- Pre-Work:
+
+  - [📖 Bcrypt Docs][bcrypt-docs]
+  - [📖 Password Security 101][password-security]
+
+[bcrypt-docs]: https://www.npmjs.com/package/bcrypt  
+[password-security]: https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html
+
+```
+| Topic         | Kahoot | Slides | Demo                            | Solution | Review |
+| ------------- | ------ | ------ | ------------------------------- | -------- | ------ |
+| Bcrypt Intro  |        | -      | - [🧑‍💻][bcrypt-demo]           | -        | -      |
+```
+
+[bcrypt-demo]: https://github.com/Stevenhulse14/node-express-mongodb/tree/main/unit-04-authentication/bcrypt
+
+---
+
+#### Day 2: Sessions and Cookies
+
+- Pre-Work:
+
+  - [📖 Sessions vs JWT][sessions-vs-jwt]
+  - [📖 Express-Session Guide][session-doc]
+
+[sessions-vs-jwt]: https://auth0.com/blog/cookies-vs-tokens-definitive-guide/  
+[session-doc]: https://www.npmjs.com/package/express-session
+
+```
+| Topic              | Kahoot | Slides | Demo                        | Solution | Review |
+| ------------------ | ------ | ------ | --------------------------- | -------- | ------ |
+| Session & Cookies  |        | -      | - [🧑‍💻][session-demo]       | -        | -      |
+```
+
+[session-demo]: https://github.com/Stevenhulse14/node-express-mongodb/tree/main/unit-04-authentication/session
+
+---
+
+#### Day 3: JWT Authentication
+
+- Pre-Work:
+
+  - [📖 JWT Basics][jwt-doc]
+  - [📖 Auth Flow Tutorial][auth-tutorial]
+
+[jwt-doc]: https://jwt.io/introduction  
+[auth-tutorial]: https://dev.to/franciscomendes10866/jwt-authentication-in-nodejs-1p96
+
+```
+| Topic         | Kahoot | Slides | Demo                      | Solution | Review |
+| ------------- | ------ | ------ | ------------------------- | -------- | ------ |
+| JWT Auth Flow |        | -      | - [🧑‍💻][jwt-demo]        | -        | -      |
+```
+
+[jwt-demo]: https://github.com/Stevenhulse14/node-express-mongodb/tree/main/unit-04-authentication/jwt-auth
+
+---
+
+#### Day 4: Role-Based Access Control
+
+```
+| Topic                  | Kahoot | Slides | Demo | Solution | Review |
+| ---------------------- | ------ | ------ | ---- | -------- | ------ |
+| RBAC Implementation    |        | -      | -    | -        | -      |
+| Protecting Endpoints   | [📺][] |        | -    | -        | -      |
+```
+
+---
+
+#### Day 5: LAB - Secure Routes
+
+```
+| Topic        | Kahoot | Slides | Demo | Solution | Review |
+| ------------ | ------ | ------ | ---- | -------- | ------ |
+| Auth Lab     |        |        |      |          |        |
+```
+
+</details>
+
+---
+
+Let me know if you want me to bundle these into a downloadable `.md` file or HTML page for easier student access!
